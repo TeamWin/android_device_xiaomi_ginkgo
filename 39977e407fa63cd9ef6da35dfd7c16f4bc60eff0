@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60db6d47_075e0836",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 516
+      },
+      "writtenOn": "2021-03-05T15:55:09Z",
+      "side": 1,
+      "message": "Made after another willow variant with different hwversion come out and after some checks on region beetween ginkgo and willow units.",
+      "revId": "39977e407fa63cd9ef6da35dfd7c16f4bc60eff0",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
