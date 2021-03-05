@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3821ccf8_9f53f09b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 516
+      },
+      "writtenOn": "2021-03-05T17:37:18Z",
+      "side": 1,
+      "message": "Brazilian ginkgo region is Gloal_B so we decided to just support newer willow version.",
+      "revId": "0bca21da3db9332bfb83fe465ad0102d90dbf6ec",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
