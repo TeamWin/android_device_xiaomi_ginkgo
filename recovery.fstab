@@ -13,6 +13,9 @@
 /system_image  emmc   /dev/block/bootdevice/by-name/system
 /vendor_image  emmc   /dev/block/bootdevice/by-name/vendor
 
+# metadata
+/dev/block/bootdevice/by-name/metadata /metadata ext4 noatime,nosuid,nodev,discard,sync wait,formattable
+
 /data          f2fs   /dev/block/bootdevice/by-name/userdata                  flags=fileencryption=ice:aes-256-cts;wrappedkey
 /firmware      vfat   /dev/block/bootdevice/by-name/modem                        flags=display="Firmware";mounttodecrypt
 /cust          ext4   /dev/block/bootdevice/by-name/cust                         flags=display="Cust"
