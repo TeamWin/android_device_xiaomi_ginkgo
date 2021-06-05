@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bba4132_ed4b8343",
+        "filename": "recovery.fstab",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-05T18:35:13Z",
+      "side": 1,
+      "message": "Can we remove the comment? You can see the partition in the block device name.",
+      "revId": "2207207bb46081e5327e31112baeab0f86e99b4f",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
