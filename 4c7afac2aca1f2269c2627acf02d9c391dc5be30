@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbad70f8_b52ed39d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-23T21:40:03Z",
+      "side": 1,
+      "message": "Hello, mauronofrio is unavailable for maintaining this device. Would you be able to take over?",
+      "revId": "4c7afac2aca1f2269c2627acf02d9c391dc5be30",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    }
+  ]
+}
