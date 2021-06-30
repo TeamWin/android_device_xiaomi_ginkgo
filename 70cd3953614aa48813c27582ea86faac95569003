@@ -33,6 +33,23 @@
       "message": "can give acces for merge",
       "revId": "70cd3953614aa48813c27582ea86faac95569003",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fb1c12d_b4ff654d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2021-06-30T08:45:10Z",
+      "side": 1,
+      "message": "need merge this and prebuilt kernel sar",
+      "revId": "70cd3953614aa48813c27582ea86faac95569003",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
