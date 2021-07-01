@@ -50,6 +50,23 @@
       "message": "need merge this and prebuilt kernel sar",
       "revId": "70cd3953614aa48813c27582ea86faac95569003",
       "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57ec2646_edfbb597",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-07-01T01:10:52Z",
+      "side": 1,
+      "message": "You should be able to merge in gerrit now to gingko.",
+      "revId": "70cd3953614aa48813c27582ea86faac95569003",
+      "serverId": "9c1c7d72-6534-4d44-b0ea-39f63e804833"
     }
   ]
 }
