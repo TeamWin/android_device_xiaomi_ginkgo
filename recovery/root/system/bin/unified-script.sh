@@ -20,20 +20,25 @@ load_ginkgo()
     resetprop "ro.vendor.product.device" "ginkgo"
 }
 
+region=$(getprop ro.boot.hwc)
+echo $region
+hwversion=$(getprop ro.boot.hwversion)
+echo $hwversion
 
-project=$(getprop ro.boot.hwc)
-echo $project
-
-case $project in
-     "willow")
-         load_willow
-         ;;
-     "ginkgo")
-         load_ginkgo
- 	;;
-     *)
- 	load_ginkgo
- 	;;
+case $region in
+    "Global_B")
+        case $hwversion in
+            "18.31.0"|"18.39.0"|"19.39.0")
+                 load_willow
+                 ;;
+            *)
+                 load_ginkgo
+                 ;;
+        esac            
+        ;;
+    *)
+        load_ginkgo
+        ;;
 esac
 
-exit 0
+exit 0  
