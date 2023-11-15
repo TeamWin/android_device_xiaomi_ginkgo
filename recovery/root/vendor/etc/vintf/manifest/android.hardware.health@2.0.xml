@@ -2,6 +2,6 @@
     <hal format="hidl">
         <name>android.hardware.health</name>
         <transport>hwbinder</transport>
-        <fqname>@2.1::IHealth/default</fqname>
+        <fqname>@2.0::IHealth/default</fqname>
     </hal>
 </manifest>
