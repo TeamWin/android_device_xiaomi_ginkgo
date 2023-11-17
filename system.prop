@@ -5,6 +5,3 @@ persist.sys.isUsbOtgEnabled=true
 vendor.gatekeeper.disable_spu=true
 ro.boot.avb_version=1.0
 ro.boot.vbmeta.avb_version=1.0
-ro.crypto.volume.filenames_mode=aes-256-cts
-ro.crypto.allow_encrypt_override=true
-ro.hardware.keystore_desede=true

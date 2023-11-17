@@ -89,6 +89,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -97,6 +98,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_ginkgo
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ginkgo
 
 # Encryption
 BOARD_USES_METADATA_PARTITION := true
@@ -112,7 +117,7 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 # Extras
 BOARD_SUPPRESS_SECURE_ERASE := true
-#TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -123,8 +128,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
-#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # TWRP specific build flags
 RECOVERY_SDCARD_ON_DATA := true
