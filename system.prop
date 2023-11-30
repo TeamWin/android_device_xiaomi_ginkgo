@@ -6,3 +6,7 @@ vendor.gatekeeper.disable_spu=true
 ro.boot.avb_version=1.0
 ro.boot.vbmeta.avb_version=1.0
 keymaster_ver=4.0
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.options=::v2
