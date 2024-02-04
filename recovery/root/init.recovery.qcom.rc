@@ -33,6 +33,8 @@ setprop prepdecrypt.loglevel 2
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    
+    mkdir /firmware
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
+
 on boot
     start health-hal-2-0
