@@ -38,3 +38,13 @@ on fs
 
 on boot
     start health-hal-2-0
+
+service postdecrypt /system/bin/postdecrypt.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on property:twrp.all.users.decrypted=true
+    start postdecrypt
