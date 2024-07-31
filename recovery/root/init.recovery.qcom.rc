@@ -28,7 +28,8 @@
 import /init.recovery.qcom_decrypt.rc
 
 on init
-setprop prepdecrypt.loglevel 2
+    setprop prepdecrypt.loglevel 2
+    exec u:r:recovery:s0 -- /system/bin/merge-fstab.sh
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}

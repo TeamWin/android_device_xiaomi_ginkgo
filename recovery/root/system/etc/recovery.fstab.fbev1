@@ -1,0 +1,2 @@
+/dev/block/bootdevice/by-name/metadata			 /metadata		  ext4	  noatime,nosuid,nodev,discard			      wait,formattable,wrappedkey
+/dev/block/bootdevice/by-name/userdata           /data            f2fs    noatime,nosuid,nodev,nodiscard,alloc_mode=reuse,fsync_mode=nobarrier,inlinecrypt    latemount,wait,check,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,quota

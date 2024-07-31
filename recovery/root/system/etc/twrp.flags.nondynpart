@@ -1,0 +1,4 @@
+/system_root   ext4   /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui
+/vendor        ext4   /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
+/system_image  emmc   /dev/block/bootdevice/by-name/system
+/vendor_image  emmc   /dev/block/bootdevice/by-name/vendor

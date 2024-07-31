@@ -1,0 +1,5 @@
+system                                                  /system                  erofs   ro                                 wait,avb,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system_ext                                              /system_ext              erofs   ro                                 wait,avb,logical,first_stage_mount
+product                                                 /product                 erofs   ro                                 wait,avb,logical,first_stage_mount
+vendor                                                  /vendor                  erofs   ro                                 wait,avb,logical,first_stage_mount
+odm                                                     /odm                     erofs   ro                                 wait,avb,logical,first_stage_mount
