@@ -1,21 +1,21 @@
 #!/system/bin/sh
 # Determine the filesystem of a block device
 
-FSTYPE=$(getprop ro.fs_type | tr '[:upper:]' '[:lower:]')
 FBE=$(getprop ro.crypto.dm_default_key.options_format.version)
 
+# Check if EROFS filesystem is present
+dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q -E "ginkgo_erofs_dynapart"
+ISEROFS=$?
+
 # Dynamic partitions
-if dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q -E "ginkgo_dynapart|qti_dynamic_partitions"; then
-    if [ "$FSTYPE" = "erofs" ]; then
-        echo >> /system/etc/recovery.fstab
+if dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q -E "ginkgo_dynapart|qti_dynamic_partitions|ginkgo_erofs_dynapart"; then
+    if [ "$ISEROFS" -eq 0 ]; then
         cat /system/etc/recovery.fstab.erofs >> /system/etc/recovery.fstab
     else
-        echo >> /system/etc/recovery.fstab
         cat /system/etc/recovery.fstab.ext4 >> /system/etc/recovery.fstab
     fi
 
     if [ "$FBE" = "2" ]; then
-        echo >> /system/etc/recovery.fstab
         cat /system/etc/recovery.fstab.fbev2 >> /system/etc/recovery.fstab
     fi
 
@@ -24,8 +24,6 @@ if dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q -E "ginkg
     done
 else
     # Non-dynamic partitions
-    echo >> /system/etc/twrp.flags
     cat /system/etc/twrp.flags.nondynpart >> /system/etc/twrp.flags
-    echo >> /system/etc/recovery.fstab
     cat /system/etc/recovery.fstab.fbev1 >> /system/etc/recovery.fstab
 fi
