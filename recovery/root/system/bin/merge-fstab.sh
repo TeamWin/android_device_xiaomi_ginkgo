@@ -5,7 +5,7 @@ FSTYPE=$(getprop ro.fs_type | tr '[:upper:]' '[:lower:]')
 FBE=$(getprop ro.crypto.dm_default_key.options_format.version)
 
 # Dynamic partitions
-if dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q ginkgo_dynapart; then
+if dd if=/dev/block/by-name/system bs=256k count=1 | strings | grep -q -E "ginkgo_dynapart|qti_dynamic_partitions"; then
     if [ "$FSTYPE" = "erofs" ]; then
         echo >> /system/etc/recovery.fstab
         cat /system/etc/recovery.fstab.erofs >> /system/etc/recovery.fstab
