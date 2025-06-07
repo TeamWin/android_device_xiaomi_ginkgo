@@ -9,6 +9,13 @@ PRODUCT_PACKAGES_ENG += \
 # Custom ROM asserts
 TARGET_OTA_ASSERT_DEVICE := ginkgo,willow
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
+# Fastbootd
+TW_INCLUDE_FASTBOOTD := true
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
